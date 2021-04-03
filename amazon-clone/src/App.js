@@ -6,6 +6,8 @@ function App() {
     // BEM naming convention
     <div className="app">
       <h1> Amazon Store</h1>
+      {/* Header */}
+      {/* Body - Home Component */}
     </div>
   );
 }
