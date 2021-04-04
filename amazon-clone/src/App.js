@@ -10,8 +10,10 @@ function App() {
   return (
     // BEM naming convention
     <Router>
+      
     <div className="app">
     <Header />
+
       <Switch>
       <Route path='/checkout'>
           <Checkout />
@@ -23,6 +25,7 @@ function App() {
 
       </Switch>
     </div>
+
     </Router>
   );
 }
