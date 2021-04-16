@@ -52,7 +52,6 @@ function App() {
         </Route>
         <Route path='/payment'>
           <Payment/>
-          <h1>Payment route</h1>
         </Route>
         {/* Keep Default Route On the Bottom */}
         <Route path='/'>
