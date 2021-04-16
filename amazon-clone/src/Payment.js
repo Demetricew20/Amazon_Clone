@@ -35,6 +35,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
+    console.log('Client Secret>>>', clientSecret)
+
 
 
     const handleSubmit = async (event) => {
