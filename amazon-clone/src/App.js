@@ -6,9 +6,14 @@ import {BrowserRouter as Router, Switch, Route }
 from 'react-router-dom';
 import Checkout from './Checkout';
 import Login from './Login';
+import Payment from './Payment'
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
-import Payment from './Payment'
+import {loadStripe} from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+
+const promise = loadStripe('pk_test_51IgzkhK8nAlCnZ75pqyKnbH0ulOrmzhEeIG752yhlNeZlufR90exSngNvbqIZTiNxgzQaFax77FcXLwNbEC3H3fz00PukLIbfM');
+
 
 function App() {
 
@@ -51,7 +56,9 @@ function App() {
           <Checkout />
         </Route>
         <Route path='/payment'>
-          <Payment/>
+          <Elements stripe={promise}>
+            <Payment/>
+          </Elements>
         </Route>
         {/* Keep Default Route On the Bottom */}
         <Route path='/'>
