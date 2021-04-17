@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import {useState} from 'react';
 import './Orders.css';
 import { useStateValue } from './StateProvider';
+import Order from './Order'
 
 function Orders() {
 
