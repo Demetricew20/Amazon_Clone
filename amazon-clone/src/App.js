@@ -6,7 +6,8 @@ import {BrowserRouter as Router, Switch, Route }
 from 'react-router-dom';
 import Checkout from './Checkout';
 import Login from './Login';
-import Payment from './Payment'
+import Payment from './Payment';
+import Orders from './Orders';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import {loadStripe} from '@stripe/stripe-js';
@@ -59,6 +60,9 @@ function App() {
           <Elements stripe={promise}>
             <Payment/>
           </Elements>
+        </Route>
+        <Route path='/orders'>
+          <Orders/>
         </Route>
         {/* Keep Default Route On the Bottom */}
         <Route path='/'>
